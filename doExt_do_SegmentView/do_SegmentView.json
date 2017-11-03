@@ -1,0 +1,93 @@
+{
+  "ID": "do_SegmentView",
+  "IsContainer": "0",
+  "Type": "UI",
+  "Name": "滑动视图",
+  "Version": "Internal",
+  "Description": "支持手势滑动和点击选中一个index，通常和do_SlideView结合在一起使用，互相联动",
+  "Icon": "",
+  "IOS": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Android": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Windows": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "WindowsPhone": {
+    "Support": 0,
+    "MinVersion": ""
+  },
+  "Html": {
+    "Support": 1,
+    "MinVersion": "5.0"
+  },
+  "Properties": [
+    {
+      "ID": "index",
+      "Name": "当前滑动UIView索引",
+      "Type": "String",
+      "DefaultValue": "0",
+      "EditType": "0",
+      "Group": "",
+      "Description": "设置当前滑动View索引值，默认为0",
+      "Design": {
+        "Type": "Text",
+        "Data": []
+      }
+    },
+    {
+      "ID": "templates",
+      "Name": "View对应的模板UI文件组",
+      "Type": "String",
+      "DefaultValue": "",
+      "EditType": "1",
+      "Group": "",
+      "Description": "SlideView支持重复使用同一个.ui(View)模板或者是多个不同的模版，值类型为一个array node，View模版对应的是一个source ui文件。\\r\\n这个属性的格式类似如下：\\r\\n['source://view/1.ui','source://view/2.ui','source://view/3.ui]",
+      "Design": {
+        "Type": "Text",
+        "Data": []
+      }
+    }
+  ],
+  "Events": [
+    {
+      "ID": "indexChanged",
+      "Description": "滑动UIView加载完成后触发",
+      "ReturnType": "Number",
+      "ReturnDesc": "返回当前index"
+    }
+  ],
+  "syncMethodes": [
+    {
+      "ID": "bindItems",
+      "Name": "绑定item的数据",
+      "Description": "可绑定listData和hashDatad实例",
+      "ReturnType": "",
+      "ReturnDesc": "",
+      "Paras": [
+        {
+          "ID": "data",
+          "Name": "数据",
+          "Type": "Node",
+          "Required": 0,
+          "DefaultValue": "",
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "ID": "refreshItems",
+      "Name": "刷新item数据",
+      "Description": "",
+      "ReturnType": "",
+      "ReturnDesc": "",
+      "Paras": []
+    }
+  ],
+  "asyncMethodes": []
+}
